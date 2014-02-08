@@ -1,0 +1,21 @@
+common:
+    ## YOUR_BUCKET_NAME: e.g) my.docker-registry.example.com
+    boto_bucket: <YOUR_S3_BUKCET_NAME>
+
+    s3_access_key: <YOUR_AWS_ACCESS_KEY_ID>
+    s3_secret_key: <YOUR_AWS_SECRET_ACCESS_KEY>
+    s3_bucket: <YOUR_S3_BUCKET_NAME>
+    s3_encrypt: false
+    s3_secure: true
+    secret_key: registryguest
+
+dev:
+    storage: local
+    storage_path: /tmp/registry
+    loglevel: debug
+
+private:
+    storage: s3
+    storage_path: /docker-registry
+    loglevel: debug
+
